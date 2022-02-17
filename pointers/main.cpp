@@ -85,8 +85,9 @@ int main() {
 	std::string* psrt = &str;
 
 	int a = 10;
-	message(a);		// lvalue
-	message(20);	// rvalue
+	message(a);				// lvalue
+	message(std::move(a));	// rvalue
+	message(20);			// rvalue
 
 	nothing_do_xvalue(42);
 	nothing_do_xvalue(a);
